@@ -63,5 +63,6 @@
     "lodash": "^4.17.4",
     "node-fetch": "^2.6.0",
     "resolve-from": "^4.0.0"
-  }
+  },
+  "gitHead": "e53a160f409e463f45752f8b5dc6ab2ec2ac6a27"
 }
