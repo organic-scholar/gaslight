@@ -1,6 +1,6 @@
 {
   "name": "@gaslight/graphql-import-loader",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -15,7 +15,6 @@
     "build": "rm -rf lib && tsc",
     "test": "jest src"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "@types/node": "9.6.51",
@@ -25,6 +24,6 @@
     "typescript": "3.5.3"
   },
   "dependencies": {
-    "@gaslight/graphql-import": "0.0.3"
+    "@gaslight/graphql-import": "^0.0.4"
   }
 }
