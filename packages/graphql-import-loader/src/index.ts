@@ -4,5 +4,12 @@ module.exports = function ()
 {
     var callback = this.async();
     this.cacheable();
-    callback(null, "module.exports = `" + importSchema(this.resourcePath).replace(/`/g, '\\`') + "`");
+    importSchema().then((source:string)=>
+    {
+        callback(null, "module.exports = `" + source.replace(/`/g, '\\`') + "`");
+
+    }).catch((err)=>
+    {
+        callback(err);
+    })
 }

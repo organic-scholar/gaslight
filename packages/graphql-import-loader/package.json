@@ -25,5 +25,6 @@
   },
   "dependencies": {
     "@gaslight/graphql-import": "^0.0.4"
-  }
+  },
+  "gitHead": "7f93d495cd0f1207b923e1b3861e5c5566dab106"
 }
