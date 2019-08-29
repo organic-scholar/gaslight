@@ -17,7 +17,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "rm -rf lib && tsc",
-    "test": "jest test",
+    "test": "jest src",
     "docs": "typedoc --out docs src/index.ts --hideGenerator --exclude **/*.test.ts",
     "docs:publish": "cp ./now.json ./docs && cd docs && now --public -f && now alias && now rm --yes --safe graphql-import & cd .."
   },

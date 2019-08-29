@@ -3,13 +3,11 @@
     "target": "es5",
     "moduleResolution": "node",
     "module": "commonjs",
-    "sourceMap": true,
     "rootDir": "./src",
+    "sourceMap": true,
     "outDir": "./lib",
     "lib": [
       "dom", "esnext"
     ]
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "examples"]
 }

@@ -1,4 +1,4 @@
-import { parseImportLine, parseSDL, importSchema } from '../src'
+import { parseImportLine, parseSDL, importSchema } from '.'
 import { buildSchema } from 'graphql';
 import { graphql } from 'graphql';
 
@@ -823,6 +823,5 @@ test.only('import using uri', async ()=>
       }
     `
   let result = await graphql(schema, query);
-  console.log(result.data);
   expect(result.data.__type).not.toBeNull();
-});
+}, 5000);
