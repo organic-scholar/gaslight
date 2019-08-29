@@ -6,6 +6,7 @@ cache:
     - "node_modules"
 
 install:
+  - npm i -g npm@latest
   - npm i -g lerna
   - lerna bootstrap
 
