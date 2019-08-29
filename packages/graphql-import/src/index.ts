@@ -283,7 +283,6 @@ async function  collectDefinitions(
     }
   }
   let result = { allDefinitions, typeDefinitions }
-  console.log(result);
   return result;
 }
 

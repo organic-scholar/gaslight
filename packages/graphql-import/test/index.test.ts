@@ -1,6 +1,6 @@
-import test from 'ava'
-import * as fs from 'fs'
-import { parseImportLine, parseSDL, importSchema } from '.'
+import { parseImportLine, parseSDL, importSchema } from '../src'
+import { buildSchema } from 'graphql';
+import { graphql } from 'graphql';
 
 // test('parseImportLine: parse single import', t => {
 //   t.deepEqual(parseImportLine(`import A from "schema.graphql"`), {
@@ -808,10 +808,21 @@ import { parseImportLine, parseSDL, importSchema } from '.'
 //   t.is(importSchema('fixtures/collision/a.graphql'), expectedSDL)
 // })
 
-test.only('import using uri', async (t)=>
+test.only('import using uri', async ()=>
 {
-  return importSchema('fixtures/http/schema.graphql').then((result)=>
-  {
-    console.log('result', result);
-  });
+  let source = await importSchema('fixtures/http/schema.graphql');
+  let schema = buildSchema(source);
+  let query = `
+      query {
+        __type(name: "Geo") {
+          fields {
+            name
+            description
+          }
+        }
+      }
+    `
+  let result = await graphql(schema, query);
+  console.log(result.data);
+  expect(result.data.__type).not.toBeNull();
 });
