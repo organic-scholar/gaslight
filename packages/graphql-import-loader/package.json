@@ -1,0 +1,30 @@
+{
+  "name": "@gaslight/graphql-import-loader",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "rm -rf lib && tsc",
+    "test": "jest src"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "9.6.51",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "7.0.1",
+    "typescript": "3.5.3"
+  },
+  "dependencies": {
+    "@gaslight/graphql-import": "0.0.3"
+  }
+}
