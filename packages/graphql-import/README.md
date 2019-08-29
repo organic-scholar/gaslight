@@ -1,5 +1,8 @@
 # graphql-import
 
+[![Build Status](https://travis-ci.org/organic-scholar/gaslight.svg?branch=master)](https://travis-ci.org/organic-scholar/gaslight)
+
+
 Import &amp; export definitions in GraphQL SDL (also refered to as GraphQL modules)
 
 ## Install
@@ -61,6 +64,11 @@ type Comment {
 }
 ```
 
+`https://example.com/graphql`
+```
+# import User from 'https://exmaple.com/graphql'
+```
+
 Running `console.log(importSchema('schema.graphql'))` produces the following output:
 
 ```graphql
@@ -85,5 +93,4 @@ type Comment {
 
 - Static import step as build time
 - Namespaces
-- Support importing from HTTP endpoints (or [Links](https://github.com/apollographql/apollo-link))
-- Create RFC to add import syntax to GraphQL spec
+- Support importing from HTTP endpoints
