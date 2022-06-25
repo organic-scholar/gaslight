@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "resolve-from": "^4.0.0"
   },
   "gitHead": "c429d834d2c22394169eabecdfb72d2ad484dbf9"
